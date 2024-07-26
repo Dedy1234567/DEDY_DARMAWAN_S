@@ -258,6 +258,7 @@ body{
 }        
 
 .element-surah{
+    border: 1px solid white;
     background: linear-gradient(to left, rgb(151, 147, 147), rgb(43, 43, 39));
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
