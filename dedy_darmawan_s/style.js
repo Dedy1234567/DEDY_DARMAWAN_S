@@ -38,7 +38,7 @@ const surahData = (data) => {
     jumlahAyat.classList.add("p");
     jumlahAyat.classList.add("jumlah-ayat");
 
-    // Membuat nomor surah, nama surah latin dan nama surah 
+    // Membuat nomor surah, nama surah latin jumlah ayat nomor nama surah 
     arti.textContent = data.arti;
     numberSurah.textContent = data.nomor + ". ";
     namaArab.textContent = data.nama;
@@ -60,13 +60,15 @@ const surahData = (data) => {
   });
 };
 
+// deklarasi fungsi fetchSurahData
 const fetchSurahData = (surahNumber) => {
-  fetch(`https://equran.id/api/v2/surat/${surahNumber}`)
+  fetch(`https://equran.id/api/v2/surat/${surahNumber}`) //mengambil data dari API
     .then((response) => response.json())
     .then((surahData) => {
-      const container = document.querySelector('.container');
+      const container = document.querySelector('.container'); //mengosongkan container
       container.innerText = "";
 
+      //membuat dan menambahkan elemen html serta menambahkan penamaan class untuk di atur di css
       const wrapper = document.createElement("div");
       wrapper.classList.add("title");
 
@@ -104,6 +106,8 @@ const fetchSurahData = (surahNumber) => {
         ayahContainer.appendChild(text);
         text.style.right = "end";
 
+        // kalau di buat di css tampilan list surah nya jadi rusak
+        // karena nama div nya ada yg sama 
         container.style.flexDirection = "column";
 
         const textArabic = document.createElement("p");
