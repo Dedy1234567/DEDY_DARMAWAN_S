@@ -45,7 +45,6 @@ const surahData = (data) => {
     jumlahAyat.textContent = data.jumlahAyat + " ayat";
     namaLatin.textContent = data.namaLatin;
 
-    namaArab.style.width = '400px';
     surahElement.style.border = "1px solid white";
 
     // Memasukkan isi dari API ke dalam let dan div surahElement

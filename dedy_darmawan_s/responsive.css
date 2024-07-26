@@ -114,8 +114,14 @@
         .icon-2 ul li a{
             font-size: 12px;
         }
+        ul li{
+            width: 60px;
+        }
         .icon-2{
-            margin: 5px 5px 0 0;
+            margin: 5px 25px 0 0;
+        }
+        ul{
+            gap: 5px;
         }
         .image-1{
             margin-top: 20px;

@@ -309,6 +309,8 @@ body{
 
 .nama-surah{
     font-size: 40px;
+    width: 400px;
+    margin-left: 70px;
 }
 
 .nama-latin{
